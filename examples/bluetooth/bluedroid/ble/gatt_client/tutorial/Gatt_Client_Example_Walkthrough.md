@@ -15,9 +15,8 @@ This example is located in the examples folder of the ESP-IDF under the [bluetoo
 #include <stdio.h>
 #include "nvs.h"
 #include "nvs_flash.h"
-#include "controller.h"
 
-#include "bt.h"
+#include "esp_bt.h"
 #include "esp_gap_ble_api.h"
 #include "esp_gattc_api.h"
 #include "esp_gatt_defs.h"
@@ -25,9 +24,9 @@ This example is located in the examples folder of the ESP-IDF under the [bluetoo
 #include "esp_gatt_common_api.h"
 ```
 
-These `includes` are required for the FreeRTOS and underlying system components to run, including the logging functionality and a library to store data in non-volatile flash memory. We are interested in `“bt.h”`, `“esp_bt_main.h”`, `"esp_gap_ble_api.h"` and `“esp_gattc_api.h”`, which expose the BLE APIs required to implement this example.
+These `includes` are required for the FreeRTOS and underlying system components to run, including the logging functionality and a library to store data in non-volatile flash memory. We are interested in `“esp_bt.h”`, `“esp_bt_main.h”`, `"esp_gap_ble_api.h"` and `“esp_gattc_api.h”`, which expose the BLE APIs required to implement this example.
 
-* `bt.h`: configures the BT controller and VHCI from the host side.
+* `esp_bt.h`: configures the BT controller and VHCI from the host side.
 * `esp_bt_main.h`: initializes and enables the Bluedroid stack.
 * `esp_gap_ble_api.h`: implements the GAP configuration, such as advertising and connection parameters.
 * `esp_gattc_api.h`: implements the GATT Client configuration, such as connecting to peripherals and searching for services.
